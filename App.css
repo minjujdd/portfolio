@@ -1,0 +1,151 @@
+/* 전체 페이지의 기본 스타일 */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color:#333;
+  color: #333;
+
+
+}
+
+/* 네비게이션 바 스타일 */
+/* 네비게이션 바 스타일 */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column; /* 세로 정렬을 위해 방향 변경 */
+  align-items: flex-start; /* 항목들을 왼쪽 정렬 */
+  height: 100vh; /* 전체 높이 */
+  position: fixed; /* 고정 위치 */
+  height:100%;
+  right: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 30px 15px; /* 좀 더 넓은 패딩 제공 */
+  display: block; /* 링크를 블록 요소로 설정 */
+  font-weight:900;
+}
+
+.navbar a:hover {
+  color: #ccc;
+}
+
+.menubar {
+  list-style: none; /* 리스트 마커 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+  margin: 0; /* 기본 마진 제거 */
+  width: 200px; /* 네비게이션 바 너비 설정 */
+}
+
+
+/* 각 컴포넌트 페이지 스타일 */
+.component {
+  padding: 20px;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 홈, 스킬, 사이트 등 각 섹션의 타이틀 스타일 */
+h1 {
+  color: #333;
+}
+
+/* 버튼 및 링크 스타일 */
+button, .button {
+color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* 폼 입력 필드 스타일 */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* padding과 border가 width에 포함되도록 설정 */
+}
+
+/* 폼 레이블 스타일 */
+label {
+  color: #666;
+}
+
+/* 에러 메시지 스타일 */
+.error {
+  color: red;
+  font-size: 0.8em;
+}
+
+/* 푸터 스타일 */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .navbar a {
+    padding: 10px;
+    font-size: 0.8em;
+  }
+
+  .menubar {
+    display: flex;
+  }
+
+  .component {
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  input[type="text"], input[type="email"], textarea {
+    padding: 8px;
+  }
+
+  footer {
+    position: relative; /* 모바일 화면에서는 고정되지 않도록 변경 */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  h1, label {
+    font-size: 1em; /* 작은 화면에서 글꼴 크기 조절 */
+  }
+  .nav{
+    border-style:solid;
+    border-left-width:30px;
+    border-color:#333;
+  }
+  .component {
+    margin-top: 5px;
+    padding: 5px;
+  }
+}

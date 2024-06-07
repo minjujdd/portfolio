@@ -1,0 +1,166 @@
+/* 연락처 페이지 스타일 */
+.contact {
+    padding: 20px;
+    background-image: url('../image/contact.png');
+    background-size:100%;
+    background-repeat: no-repeat; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 100vh;
+    /* padding-top:10%; */}
+    .max {
+     width:70%;
+      background-color: #ffffff;
+      margin-left:7% ;
+
+    }
+   
+  
+  .contact-content{
+    display:flex;
+    flex-direction:row;
+    color:black;
+    
+     
+  } 
+
+
+  
+  /* 제목 스타일 */
+  .contact .title {
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    width:100%;
+  }
+  
+  /* 좌우 컬럼 레이아웃 */
+  .contact .left.column, .contact .right.column {
+    padding: 20px;
+    
+  }
+  .contact .left.column{
+  width:30%;
+  border-right:2px solid;
+  }
+
+.contact .right.column{width:40%;}
+  
+  /* 연락처 정보 텍스트 */
+  .contact-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+
+  
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  
+  .info .head {
+    font-weight: bold;
+  }
+  
+  .info .tail {
+    color:whitesmoke;
+  }
+  
+
+  /* 양식 필드 스타일 */
+  .field {
+    margin-bottom: 15px;
+  }
+  
+  .field input[type="text"],
+  .field input[type="email"],
+  .field textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .field textarea {
+    resize: none; /* 텍스트 영역 크기 조절 비활성화 */
+  }
+  
+  /* 버튼 스타일 */
+  .sendn button {
+    width: 100%;
+    padding: 10px;
+   background-color: gray;
+    color: white;
+    font-weight:300;
+    cursor: pointer;
+  }
+  
+.sendn button:hover {
+    background-color: darkblue;
+  }
+  .s{
+    display:flex;
+    margin:20%;
+  }
+  .site{
+    width:20%;
+    padding:10px;
+  }
+  @media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .max {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .contact .left.column, .contact .right.column {
+        width: 100%;
+        padding: 10px;
+        border-right: none;
+    }
+    .field input[type="text"],
+    .field input[type="email"],
+    .field textarea {
+      width: 80%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 10px;
+    }
+
+    .contact .title {
+        font-size: 18px;
+    }
+
+ 
+    .field input[type="text"],
+    .field input[type="email"],
+    .field textarea {
+      width: 80%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .sendn{
+      padding-left:0px;
+      padding-right:50px;
+    }
+    .s{
+      margin-left:10px;
+    }
+    .info{
+      padding-right:50px;
+    }
+}

@@ -1,0 +1,86 @@
+/* 기본 스타일 */
+.about {
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.max-width {
+  max-width: 70%;
+  max-height:70%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about-content {
+  background-color: #fff;
+  padding: 20px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.minpic {
+  flex: 1;
+  padding-right: 20px;
+}
+.profile ul {
+  list-style-type: none;
+  padding: 0;
+  flex: 2;
+}
+.profile li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+.profile li:last-child {
+  border-bottom: none;
+}
+h2 {
+  color: #333;
+  text-align: center;
+}
+article {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 5px solid #007bff;
+}
+article h3 {
+  color: #333;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img {
+  width: 100%; /* 화면 크기에 맞추어 이미지 크기 조정 */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column; /* 모바일에서는 요소들을 세로로 쌓음 */
+  }
+  .minpic {
+    padding-right: 0;
+  }
+  .max-width {
+    max-width: 95%; /* 화면 너비에 따라 최대 폭 조정 */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .max-width {
+    max-width: 85%;
+  }
+}
+
+@media (min-width: 901px) {
+  .max-width {
+    max-width: 70%;
+  }
+}
